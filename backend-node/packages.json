@@ -1,0 +1,15 @@
+{
+  "name": "mern-calculator",
+  "version": "1.0.0",
+  "description": "mern calculator",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --experimental-modules server.js"
+  },
+  "author": "Mariana Garcia",
+  "license": "ISC",
+  "dependecies": {
+    "express": "^4.17.1"
+  }
+}
