@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
-import logo from "./logo.svg";
+import React, { useState } from "react";
 import "./App.css";
 
 function App() {
   const [amount, setAmount] = useState("");
   const [percent, setPercent] = useState("");
-  const [tip, setTip] = useState("Tip goes here");
-  const [data, setData] = useState([]);
+  const [tip, setTip] = useState("Total :) ");
 
   const calculateTip = (e) => {
     // e
@@ -37,18 +35,37 @@ function App() {
 
   return (
     <div className="App">
-      <input
-        type="text"
-        value={amount}
-        onChange={(e) => setAmount(e.target.value)}
-      ></input>
-      <input
-        type="text"
-        value={percent}
-        onChange={(e) => setPercent(e.target.value)}
-      ></input>
-      <button onClick={calculateTip}>Send</button>
-      <h1>{tip}</h1>
+      <div class="container">
+        <div class="left">
+          <div class="header">
+            <h2 class="animation a1">Super Tip Calculator</h2>
+            <h4 class="animation a2">Calculate your total</h4>
+          </div>
+          <div class="form">
+            <input
+              type="text"
+              value={amount}
+              class="form-field animation a4"
+              placeholder={"Amount"}
+              onChange={(e) => setAmount(e.target.value)}
+            ></input>
+            <input
+              type="text"
+              class="form-field animation a4"
+              value={percent}
+              placeholder={"Percent"}
+              onChange={(e) => setPercent(e.target.value)}
+            ></input>
+            <button class="animation a6" onClick={calculateTip}>
+              CALCULATE
+            </button>
+            <div className="total__div">
+              <h1 class="animation a1">{tip}</h1>
+            </div>
+          </div>
+        </div>
+        <div class="right"></div>
+      </div>
     </div>
   );
 }
